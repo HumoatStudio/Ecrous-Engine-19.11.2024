@@ -1,0 +1,433 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../../fonts/font.otf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'CustomFont', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    background-color: #1A1A1A;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.title {
+    position: absolute;
+    top: 15px;
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    color: white;
+    opacity: 0;
+    animation: fadeInTitle 2s ease-in-out forwards;
+}
+
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стиль для кнопки назад */
+.back-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 10;
+    opacity: 1; /* Начальное состояние с нулевой прозрачностью */
+    animation: fadeInClose 1s ease forwards;
+    animation-delay: 0.2s; /* Задержка появления кнопки назад */
+}
+
+.back-button img {
+    width: 100%;
+    height: 100%;
+}
+
+.back-button:hover {
+    transform: scale(1.3);
+}
+
+@keyframes fadeInClose {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.profileIcon {
+    width: 75px;
+    height: 75px;
+    background-color: #424242;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    top: 15px; /* Убираем отступ сверху */
+    right: 15px; /* Располагаем элемент у правого края */
+    transform: translateX(50%); /* Сдвигаем элемент, чтобы он был центрирован относительно правого края */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInCircle {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.Project1 {
+    width: 300px;
+    height: 200px;
+    background-color: #424242;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 150px; /* Отступ сверху */
+    left: 150px; /* Размещаем элемент по центру */
+    transform: translateX(-50%); /* Сдвигаем элемент влево, чтобы он был центрирован */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.Project2 {
+    width: 300px;
+    height: 200px;
+    background-color: #424242;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 150px; /* Отступ сверху */
+    left: 475px; /* Размещаем элемент по центру */
+    transform: translateX(-50%); /* Сдвигаем элемент влево, чтобы он был центрирован */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.Project3 {
+    width: 300px;
+    height: 200px;
+    background-color: #424242;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 150px; /* Отступ сверху */
+    left: 800px; /* Размещаем элемент по центру */
+    transform: translateX(-50%); /* Сдвигаем элемент влево, чтобы он был центрирован */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.Project4 {
+    width: 300px;
+    height: 200px;
+    background-color: #424242;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 150px; /* Отступ сверху */
+    left: 1125px; /* Размещаем элемент по центру */
+    transform: translateX(-50%); /* Сдвигаем элемент влево, чтобы он был центрирован */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.Project5 {
+    width: 300px;
+    height: 200px;
+    background-color: #424242;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 150px; /* Отступ сверху */
+    left: 1450px; /* Размещаем элемент по центру */
+    transform: translateX(-50%); /* Сдвигаем элемент влево, чтобы он был центрирован */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.Project6 {
+    width: 300px;
+    height: 200px;
+    background-color: #424242;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 400px; /* Отступ сверху */
+    left: 150px; /* Размещаем элемент по центру */
+    transform: translateX(-50%); /* Сдвигаем элемент влево, чтобы он был центрирован */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.Project7 {
+    width: 300px;
+    height: 200px;
+    background-color: #424242;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 400px; /* Отступ сверху */
+    left: 475px; /* Размещаем элемент по центру */
+    transform: translateX(-50%); /* Сдвигаем элемент влево, чтобы он был центрирован */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.Project8 {
+    width: 300px;
+    height: 200px;
+    background-color: #424242;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 400px; /* Отступ сверху */
+    left: 800px; /* Размещаем элемент по центру */
+    transform: translateX(-50%); /* Сдвигаем элемент влево, чтобы он был центрирован */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.Project9 {
+    width: 300px;
+    height: 200px;
+    background-color: #424242;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 400px; /* Отступ сверху */
+    left: 1125px; /* Размещаем элемент по центру */
+    transform: translateX(-50%); /* Сдвигаем элемент влево, чтобы он был центрирован */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.Project10 {
+    width: 300px;
+    height: 200px;
+    background-color: #424242;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 400px; /* Отступ сверху */
+    left: 1450px; /* Размещаем элемент по центру */
+    transform: translateX(-50%); /* Сдвигаем элемент влево, чтобы он был центрирован */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.Project11 {
+    width: 300px;
+    height: 200px;
+    background-color: #424242;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 650px; /* Отступ сверху */
+    left: 150px; /* Размещаем элемент по центру */
+    transform: translateX(-50%); /* Сдвигаем элемент влево, чтобы он был центрирован */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.Project12 {
+    width: 300px;
+    height: 200px;
+    background-color: #424242;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 650px; /* Отступ сверху */
+    left: 475px; /* Размещаем элемент по центру */
+    transform: translateX(-50%); /* Сдвигаем элемент влево, чтобы он был центрирован */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.Project13 {
+    width: 300px;
+    height: 200px;
+    background-color: #424242;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 650px; /* Отступ сверху */
+    left: 800px; /* Размещаем элемент по центру */
+    transform: translateX(-50%); /* Сдвигаем элемент влево, чтобы он был центрирован */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.Project14 {
+    width: 300px;
+    height: 200px;
+    background-color: #424242;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 650px; /* Отступ сверху */
+    left: 1125px; /* Размещаем элемент по центру */
+    transform: translateX(-50%); /* Сдвигаем элемент влево, чтобы он был центрирован */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+.Project15 {
+    width: 300px;
+    height: 200px;
+    background-color: #424242;
+    border-radius: 10px;
+    position: absolute;
+    cursor: pointer;
+    top: 650px; /* Отступ сверху */
+    left: 1450px; /* Размещаем элемент по центру */
+    transform: translateX(-50%); /* Сдвигаем элемент влево, чтобы он был центрирован */
+    opacity: 0;
+    animation: fadeInCircle 1.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInProj {
+    0% {
+        transform: translateX(-50%) scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+}
+
+.Project1 {
+    animation-delay: 0s; /* Появляется сразу */
+}
+
+.Project2 {
+    animation-delay: 0.2s; /* Появляется через 0.2 секунды */
+}
+
+.Project3 {
+    animation-delay: 0.4s;
+}
+
+.Project4 {
+    animation-delay: 0.6s;
+}
+
+.Project5 {
+    animation-delay: 0.8s;
+}
+
+.Project6 {
+    animation-delay: 1s;
+}
+
+.Project7 {
+    animation-delay: 1.2s;
+}
+
+.Project8 {
+    animation-delay: 1.4s;
+}
+
+.Project9 {
+    animation-delay: 1.6s;
+}
+
+.Project10 {
+    animation-delay: 1.8s;
+}
+
+.Project11 {
+    animation-delay: 2s;
+}
+
+.Project12 {
+    animation-delay: 2.2s;
+}
+
+.Project13 {
+    animation-delay: 2.4s;
+}
+
+.Project14 {
+    animation-delay: 2.6s;
+}
+
+.Project15 {
+    animation-delay: 2.8s; /* Последний элемент появляется позже всех */
+}
+
+.Search input {
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%) scale(0); /* Исходное состояние */
+    width: 25%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Скрыто изначально */
+    animation: appear 0.8s ease-out forwards; /* Анимация появления */
+}
+
+@keyframes appear {
+    0% {
+        transform: translateX(-50%) scale(0);
+        opacity: 0;
+    }
+        50% {
+        transform: translateX(-50%) scale(1.1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+}
