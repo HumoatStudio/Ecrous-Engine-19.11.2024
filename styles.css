@@ -1,0 +1,443 @@
+/* Первый шрифт */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('fonts/font.otf') format('opentype');
+}
+
+/* Второй шрифт */
+@font-face {
+    font-family: 'CustomFont2';
+    src: url('fonts/Khand-Bold.ttf') format('opentype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'CustomFont', sans-serif;
+}
+
+body, html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    background-color: #1A1A1A; /* Новый цвет фона */
+    color: white;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.title {
+    position: absolute;
+    top: 25px;
+    text-align: center;
+    width: 100%;
+    font-size: 75px;
+    opacity: 0;
+    font-weight: bold;
+    font-family: 'CustomFont2', sans-serif; /* Если шрифт установлен в системе */
+    animation: fadeInTitle 2s ease-in-out forwards;
+}
+
+.center-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.center-image {
+    width: 100px; /* Размер картинки */
+    height: auto;
+    margin-bottom: 20px; /* Отступ между картинкой и текстом */
+    opacity: 0; /* Начальная невидимость */
+    animation: fadeInImage 2s ease-in-out forwards; /* Анимация появления картинки */
+}
+
+.center-text {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    opacity: 0; /* Начальная невидимость */
+    animation: fadeInText 2s ease-in-out forwards; /* Анимация появления текста */
+    margin-top: 20px; /* Дополнительное смещение вниз */
+}
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Картинка начинает чуть выше */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Картинка появляется в центре */
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Текст начинается чуть ниже */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Текст появляется в центре */
+    }
+}
+
+@keyframes fadeInTitle {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    opacity: 0;
+    animation: fadeInContainer 3s ease-in-out forwards;
+}
+
+@keyframes fadeInContainer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация для соцсетей */
+.social-links {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: rgba(255, 255, 255, 1.0); /* Цвет текста кнопки */
+    background-color: rgba(37, 37, 37, 1.0); /* Цвет фона кнопки */
+    border-radius: 30px;
+    opacity: 0;
+    padding: 10px; /* Увеличиваем отступы внутри кнопки для большего фона */
+    animation: fadeInSocialLinks 4.5s ease-in-out forwards;
+}
+
+@keyframes fadeInSocialLinks {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.social-links a {
+    margin-right: 10px;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px; /* Добавляет закругленность углов */
+    transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    opacity: 0.8; /* Добавляет эффект уменьшения непрозрачности */
+    background-color: rgba(0, 255, 204, 1.0); /* Цвет фона при наведении */
+    border-color: rgba(255, 255, 255, 1.0); /* Цвет обводки при наведении */
+    transform: translateY(-2px); /* Немного поднимаем кнопку при наведении */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Увеличиваем тень при наведении */
+}
+
+@media (max-width: 400px) {
+    .menu-button {
+        width: 80%;
+    }
+}
+
+.welcome-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.welcome-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+}
+
+#welcome-content button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #6200ea;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#welcome-content button:hover {
+    background-color: #3700b3;
+    transform: scale(1.05); /* Добавляет эффект увеличения при наведении */
+}
+
+/* Панель с кнопками, расположенная слева */
+.side-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 300px; /* Ширина панели */
+    height: 100%; /* Высота панели на весь экран */
+    background-color: #222222; /* Цвет фона панели */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрирование кнопок по вертикали */
+    align-items: center; /* Выравнивание элементов по центру по оси X */
+    padding-top: 20px;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(100%); /* Скрывает панель по умолчанию */
+    animation: slideUp 0.5s ease-in-out forwards; /* Анимация подъема панели */
+}
+
+/* Анимация подъема панели */
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Стили для текста с версией билда */
+.build-info {
+    position: absolute;
+    top: 20px; /* Располагаем текст вверху панели */
+    color: rgba(255, 255, 255, 0.7); /* Белый цвет с прозрачностью */
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'CustomFont2', sans-serif; /* Если шрифт установлен в системе */
+    width: 100%;
+}
+
+/* Кнопки внутри панели */
+.side-panel .menu-button {
+    width: 250px; /* Ширина кнопок */
+    height: 60px; /* Высота кнопок */
+    margin: 10px 0; /* Отступы между кнопками */
+    color: rgba(255, 255, 255, 1.0);
+    background-color: #303030;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 255, 204, 1.0);
+    font-size: 22px; /* Размер шрифта кнопок */
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.side-panel .menu-button:hover {
+    background-color: #;
+    border-color: rgba(255, 255, 255, 1.0);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 400px) {
+    .side-panel {
+        width: 100%; /* При меньших разрешениях панель будет занимать всю ширину */
+    }
+
+    .side-panel .menu-button {
+        width: 80%; /* Кнопки будут занимать 80% от ширины экрана */
+    }
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none; /* Скрываем по умолчанию */
+    position: fixed; /* Фиксированное положение */
+    z-index: 1; /* Помещаем поверх других элементов */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Добавляем полосу прокрутки, если содержимое слишком большое */
+    background-color: rgba(0,0,0,0.4); /* Полупрозрачный фон */
+    font-family: 'CustomFont2', bold;
+}
+
+.modal-content {
+    background-color: #1F1F1F;
+    margin: 15% auto;
+    padding: 25px;
+    border: 5px solid black;
+    width: 80%;
+    height: 40vh;
+    overflow-y: auto; /* Добавляем вертикальную прокрутку */
+    border-radius: 15px;
+    display: flex;
+    position: relative;
+    flex-direction: column; /* Размещаем элементы в колонку */
+    align-items: center; /* Выравниваем элементы по вертикали */
+}
+
+.modal-menu {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Располагаем элементы в строку */
+    gap: 20px; /* Отступ между пунктами */
+    margin-top: 20px; /* Отступ сверху */
+}
+
+.thank-you {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px; /* Отступ под текстом */
+  text-align: center; /* Центрируем текст */
+}
+
+.modal-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.modal-menu li {
+  margin: 10px 0;
+}
+
+.modal-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.modal-menu a:hover {
+  color: #f39c12;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.block-with-text {
+    overflow: hidden;
+}
+
+/* Для больших экранов */
+@media (min-width: 768px) {
+  .modal-content {
+    width: 60%;
+  }
+}
+
+/* Для маленьких экранов */
+@media (max-width: 767px) {
+  .modal-content {
+    width: 90%;
+  }
+}
+
+.news-content {
+  background-color: #1F1F1F;
+  margin: 15% auto;
+  padding: 25px;
+  border: 5px solid black;
+  width: 80%;
+  height: 40vh;
+  overflow: hidden;
+  border-radius: 15px;
+  display: flex;
+  position: relative;
+  flex-direction: column; /* Размещаем элементы в колонку */
+  align-items: center; /* Выравниваем элементы по вертикали */
+}
+
+.NewsText {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px; /* Отступ под текстом */
+  text-align: center; /* Центрируем текст */
+}
+
+.closeNews {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.closeNews:hover,
+.closeNews:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.NewsImages {
+  display: flex;
+  justify-content: center; /* Центрируем изображения по горизонтали */
+  gap: 20px; /* Расстояние между изображениями */
+}
+
+.news-image {
+  width: 200px; /* Ширина изображения */
+  height: 275px; /* Высота изображения */
+  object-fit: cover; /* Сохраняем пропорции внутри заданных размеров */
+  border-radius: 10px; /* Закруглённые углы */
+}
+
+.news-image:hover {
+  transform: scale(1.1); /* Увеличиваем изображение при наведении */
+  transition: transform 0.3s ease; /* Плавный эффект увеличения */
+}

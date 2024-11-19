@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="styles.css" id="themeStylesheet">
+    <link rel="icon" href="sprites/app.png" type="image/png">
+</head>
+<body>
+    <div class="title">Ecrous Engine</div>
+    <div class="side-panel">
+        <button class="menu-button" onclick="openPage('scenes/projects.html')">Мои Проекты</button>
+        <button class="menu-button" onclick="openPage('scenes/Community/Community.html')">Комьюнити</button>
+        <button class="menu-button" onclick="openPage('scenes/profile.html')">Профиль</button>
+        <button class="menu-button" onclick="openPage('scenes/settings.html')">Настройки</button>
+        <button id="News" class="menu-button">Новости</button>
+        <button id="myBtn" class="menu-button">Благодарности</button>
+        <div class="build-info">19.11.2024</div>
+    </div>
+    
+    <div class="center-container">
+        <img src="sprites/coffie.png" alt="Your Image" class="center-image">
+        <div class="center-text">
+            Похоже, у вас еще нет проектов.
+            <br>Создайте новый или импортируйте!
+        </div>
+    </div>
+
+    <div class="modal-content" id="myModal">
+      <span class="close">&times;</span>
+      <div class="thank-you">Спасибо от сообщества Ecrous Engine!</div>
+      <ul class="modal-menu">
+        <li><a href="javascript:void(0);" onclick="openSection('authors')">Авторы</a></li>
+        <li><a href="javascript:void(0);" onclick="openSection('donors')">Доноры</a></li>
+        <li><a href="javascript:void(0);" onclick="openSection('license')">Лицензия</a></li>
+      </ul>
+
+      <!-- Разделы с текстом -->
+      <div id="authors" class="section" style="display:none;">
+        <h3>Авторы</h3>
+        <p>Даниил Домашнев</p>
+      </div>
+
+      <div id="donors" class="section" style="display:none;">
+        <h3><br>Доноры<br>Я хочу выразить свою благодарность следующим людям:</h3>
+        <p>
+            <h3><br>Программисты</h3>
+            <br>Shodiyor - за помощь с кодом<br>
+            Dragon Reis - за помощь с кодом<br>
+            Sevasik - за помощь с кодом<br>
+            Vasilii1411 - за помощь с кодом<br>
+            Prodemo70 - за помощь с кодом
+        </p>
+        <p>
+            <h3><br>Beta Testers</h3>
+            <br>W1NDOW - за тестирование<br>
+            Квистер - за тестирование<br>
+            Sevasik - за тестирование<br>
+            Простiй - за тестирование<br>
+            [[RUSLAN'S ACCOUNT]] - за тестирование<br>
+            Findergd2.2 - за тестирование<br>
+            Dark Games - за тестирование<br>
+            Mr. pro - за тестирование<br>
+            Учёный Года - за тестирование<br>
+            WhyLorn - за тестирование<br>
+            Prodemo70 - за тестирование<br>
+        </p>
+        <p>
+            <h3><br>Поддержка</h3>
+            <br>Моим Подписчиков - за моральную поддержку<br>
+            Квистер - за критику и отзывы<br>
+            Mate - за дружбу
+        </p>
+        <p>
+            <h3><br>Дизайнеры</h3>
+            <br>WesllemCG - за помощь с дизайном<br>
+            Humbleoff - за помощь с дизайном<br>
+            Totalitarian Utopia - за помощь с дизайном<br>
+            Sevasik - за помощь с дизайном
+        </p>
+    </div>
+
+
+      <div id="license" class="section" style="display:none;">
+        <h3>Лицензия</h3>
+        <p>Информация о лицензии, под которой распространяется проект.</p>
+      </div>
+    </div>
+
+    <div class="news-content" id="myModalNews">
+      <span class="closeNews">&times;</span>
+      <div class="NewsText">Новости!</div>
+      <div class="NewsImages">
+        <img src="sprites/Group 1.png" alt="Изображение 1" class="news-image">
+        <img src="sprites/Group 2.png" alt="Изображение 2" class="news-image">
+        <img src="sprites/Group 3.png" alt="Изображение 3" class="news-image">
+      </div>
+    </div>
+    
+    <!-- Соцсети в левом нижнем углу -->
+    <div class="social-links">
+        <a href="https://www.youtube.com/@EcrousEngine3" target="_blank">
+            <img src="sprites/youtube.png" alt="YouTube">
+        </a>
+        <a href="https://t.me/EcrousEngine" target="_blank">
+            <img src="sprites/telegram.png" alt="Telegram">
+        </a>
+        <a href="https://boosty.to/ecrousengine3/donate" target="_blank">
+            <img src="sprites/boosty.png" alt="Boosty">
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
